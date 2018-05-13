@@ -6,7 +6,8 @@
 	<link rel="icon" href="views/img/intro/favicon.png">
 	<link href="https://fonts.googleapis.com/css?family=Julee" rel="stylesheet">
 	<link rel="stylesheet" href="views/css/estilo.css" media="">
-
+	
+	<script src="views/js/screenfull.min.js"></script>
 
 </head>
 <body>
@@ -29,7 +30,25 @@
 	<div id="contenedor">
 <!-- /*  Incluyendo ingreso.php  */ -->
 		<?php
-			include "modules/ingreso.php";
+
+			if(isset($_GET["validar"])){
+
+				switch($_GET["validar"]){
+					case "inicio":
+					include "modules/inicio.php";
+					break;
+					case "salir":
+					include "modules/salir.php";
+					break;
+					default:
+					include "modules/ingreso.php"; 
+				}
+			}else{
+
+				include "modules/ingreso.php";
+				
+			}
+
 		?>
 		<canvas id="lienzo"></canvas>
 	</div>
@@ -40,6 +59,11 @@
 		</center>
 	</footer>
 
+<script src="views/js/variables_y_propiedades.js"></script>
 <script src="views/js/inicio.js"></script>
+<script src="views/js/juego.js"></script>
+<script src="views/js/lienzo.js"></script>
+<script src="views/js/ampliarCanvas.js"></script>
+
 </body>
 </html>

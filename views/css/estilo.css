@@ -17,7 +17,9 @@ body{
 	overflow: hidden;
 	/*font-family: 'Sedgwick Ave Display', cursive;*/
 }
-
+/*-------------------------    
+INGRESO
+--------------------------*/
 #marco{
 	position: absolute;
 	width: 1060px;
@@ -27,7 +29,7 @@ body{
 	background: #172025;
 	top: -30px;
 	left: 50%;
-	margin-left: -530px
+	margin-left: -530px;
 }
 
 #contenedor{
@@ -35,6 +37,7 @@ body{
 	width: 1000px;
 	height: 500px;
 	margin: 8vh auto;
+	background: white;
 
 }
 
@@ -73,6 +76,140 @@ body{
 	cursor: pointer;
 }
 
+/*-------------------------    
+INICIO DE SESIÓN
+--------------------------*/
+#contenedor #inicio{
+	position: absolute;
+	width: 1000px;
+	height: 500px;
+	top: 0;
+	left: 0px;
+	background: url(../img/intro/inicio.svg);
+	font-family: 'Sedgwick Ave Display', cursive;
+}
+#contenedor #inicio #cerrarSesion a{
+	position: absolute;
+	right: 0%;
+	text-align: center;
+	color: white;
+	top: -25px;
+}
+#contenedor #inicio #saludo{
+	position: absolute;
+	left: 50%;
+	width: 1000px;
+	text-align: center;
+	margin-left: -500px;
+	color: white;
+}
+#contenedor #inicio .niveles{
+	float:left;
+	position:relative;
+	width: 33.33%;
+	height: 300px;
+	margin-top:200px;
+	text-align: center;
+}
+#contenedor #inicio .niveles .puntaje{
+	position:absolute;
+	top: -120px;
+	left:50%;
+	width:100%;
+	margin-left: -50%;
+	color:white;
+	font-size: 20px;
+}
+#contenedor #inicio .niveles button{
+	display: block;
+	width: auto;
+	margin: 10px 0;
+	padding:10px;
+	border:0;
+	background: #131C17;
+	color:white;
+	font-size: 20px;
+	font-family: 'Sedgwick Ave Display', cursive;
+	border-radius: 10px 0 10px 0;
+	cursor: pointer;
+}
+#contenedor #inicio .niveles button:hover{
+	width:120px;
+	margin:15px 0;
+	transition:all .1s;
+}
+#contenedor #inicio .niveles button:active{
+	background: green;
+}	
+
+#contenedor #inicio .niveles .puntajes {
+	background: rgba(0,0,0,.8);
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	color: yellow;
+}
+#contenedor #inicio .niveles .puntajes ul li {
+	display: inline-block;	
+	width: 30%;
+	margin: 20px, 2px, 5px, 2px;
+}
+#contenedor #inicio .niveles .puntajes ul li img {
+	border-radius:100%;
+	width:30px;
+}
+#contenedor #inicio .niveles .puntajes ul li h3 {
+	font-weight: 100;
+	color:white;
+}
+/*-------------------------    
+CANVAS
+--------------------------*/
+#contenedor #lienzo{
+	display: none;
+}
+#btnAmpliar{
+	display: none;
+	position: relative;
+	width: 150px;
+	padding: 10px 5px;
+	color: white;
+	background: green;
+	text-align: center;
+	line-height: 15px;
+	border-radius: 0px 0 10px 10px;
+	cursor: pointer;
+	font-family: 'Sedgwick Ave Display', cursive;
+
+}
+
+/*-------------------------    
+PRELOAD
+--------------------------*/
+#contenedor #carga{
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 1000px;
+	height: 500px;
+	background: black;
+	text-align: center;
+	font-size: 40px;
+	color: white;
+	opacity: 1;
+	transition: opacity 1s, ease;
+	font-family: 'Sedgwick Ave Display', cursive;
+}
+#contenedor #carga #preload{
+	padding-top:17%;
+}
+
+
+/*-------------------------    
+CRÉDITOS
+--------------------------*/
+
 footer{
 	position: relative;
 	padding: 15px;
@@ -92,6 +229,10 @@ footer a:hover {
 	display: none;
 }
 
+
+/*-------------------------    
+ORIENTACION VERTICAL
+--------------------------*/
 @media all and (orientation: portrait){
 	#contenedor{
 		display: none;

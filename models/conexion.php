@@ -1,10 +1,10 @@
 <?php 
 
-class Conexion{
+class Conexion {
 
 	public function conectar(){
 
-		$link = new PDO("mysql:host=localhost;dbname=blackninja", "root", "");
+		$link = new PDO("mysql:host=localhost;dbname=blackninja","root","");
 		return $link;
 	}
 
